@@ -49,10 +49,10 @@ const checkin2= document.querySelector('#book3  .checkin')
 
 
 checkin0.style.color ='';
-status0.style.color = STATUS_MAP.overdue.color;;
-reserve0 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout0 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin0 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+status0.style.color = STATUS_MAP.overdue.color;
+if ( STATUS_MAP.overdue.canReserve ){reserve0.disabled= false}
+else if ( STATUS_MAP.overdue.canCheckout){checkout0.disabled= false}
+else if (STATUS_MAP.overdue.canCheckIn) {checkin0.disabled=false};
 
 checkin1.color = none
 status1.style.color = STATUS_MAP.status.color
