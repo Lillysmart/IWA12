@@ -27,21 +27,22 @@ const STATUS_MAP = {
 }
 
 // Edit below line 
+const status0= document.querydocument.querySelector ('#book1  p  .status')
+//status = document.querySelector(status)
+const reserve0 = document.querySelector('#book1  .status')
+const checkout0 = document.querySelector('#book1  .checkout')
+const checkin0 = document.querySelector('#book1  .checkin')
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status1 = document.querySelector('#book2  p  .status')
+const reserve1 = document.querySelector('#book2  .status')
+const checkout1 = document.querySelector('#book2  .checkout')
+const checkin1 = document.querySelector('#book2  .checkin')
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status2 = document.querySelector('#book3  p  .status')
+const reserve2= document.querySelector('#book3  .reserve')
+const checkout2 = document.querySelector('#book3 .checkout')
+const checkin2= document.querySelector('#book3  .checkin')
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
 
 checkin.0.color = none
 status.0.style.color = STATUS_MAP.status.color
