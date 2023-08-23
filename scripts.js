@@ -49,23 +49,19 @@ let checkin2= document.querySelector('#book3  .checkin')
 
 checkin0.style.color ='';
 status0.style.color = STATUS_MAP.overdue.color;
-if ( STATUS_MAP.overdue.canReserve ) reserve0.disabled= false
- if ( STATUS_MAP.overdue.canCheckout)checkout0.disabled= false
-  if (STATUS_MAP.overdue.canCheckIn) checkin0.disabled=false;
+if (STATUS_MAP.overdue.canReserve === false) reserve0.disabled = true;
+ if ( STATUS_MAP.overdue.canCheckout=== false )checkout0.disabled=true
+  if (STATUS_MAP.overdue.canCheckIn===false) checkin0.disabled=true;
 
 checkin1.style.color = '';
 status1.style.color = STATUS_MAP.reserved.color;
-if (STATUS_MAP.reserved.canReserve){reserve1.disabled=false};
-if (STATUS_MAP.reserved.canCheckout){checkout1.disabled=false};
-if (STATUS_MAP.reserved.canCheckIn){checkin1.disabled=false};
+if (STATUS_MAP.reserved.canReserve===false)reserve1.disabled=true;
+if (STATUS_MAP.reserved.canCheckout===false)checkout1.disabled=true;
+if (STATUS_MAP.reserved.canCheckIn===false)checkin1.disabled=true;
 
 
 checkin2.style.color = '';
 status2.style.color = STATUS_MAP.shelf.color;
-
-if (STATUS_MAP.shelf.canReserve)reserve2.disabled=false;
-if (STATUS_MAP.shelf.canCheckout)checkout2.disabled=false;
-if (STATUS_MAP.shelf.canCheckIn) checkin2.disabled=false;
-
-console.log("Checking canReserve:", STATUS_MAP.overdue.canReserve);
-console.log (reserve0)
+if (STATUS_MAP.shelf.canReserve===false)reserve2.disabled=true;
+if (STATUS_MAP.shelf.canCheckout===false)checkout2.disabled=true;
+if (STATUS_MAP.shelf.canCheckIn===false) checkin2.disabled=true;
