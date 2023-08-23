@@ -30,14 +30,14 @@ const STATUS_MAP = {
 
 //overdue book
 let status0= document.querySelector ('#book1 p .status')
-const reserve0 = document.querySelector('#book1  .status')
+const reserve0 = document.querySelector('#book1  .reserve')
 const checkout0 = document.querySelector('#book1  .checkout')
 let checkin0 = document.querySelector('#book1 .checkin')
 console.log (checkin0)
 
 //reserved book
 let status1 = document.querySelector('#book2  p  .status')
-const reserve1 = document.querySelector('#book2  .status')
+const reserve1 = document.querySelector('#book2  .reserve')
 const checkout1 = document.querySelector('#book2  .checkout')
 let checkin1 = document.querySelector('#book2  .checkin')
 
@@ -49,9 +49,9 @@ let checkin2= document.querySelector('#book3  .checkin')
 
 checkin0.style.color ='';
 status0.style.color = STATUS_MAP.overdue.color;
-if ( STATUS_MAP.overdue.canReserve ){reserve0.disabled= false}
-else if ( STATUS_MAP.overdue.canCheckout){checkout0.disabled= false}
-else if (STATUS_MAP.overdue.canCheckIn) {checkin0.disabled=false};
+if ( STATUS_MAP.overdue.canReserve ) reserve0.disabled= false
+ if ( STATUS_MAP.overdue.canCheckout)checkout0.disabled= false
+  if (STATUS_MAP.overdue.canCheckIn) checkin0.disabled=false;
 
 checkin1.style.color = '';
 status1.style.color = STATUS_MAP.reserved.color;
@@ -67,3 +67,5 @@ if (STATUS_MAP.shelf.canReserve)reserve2.disabled=false;
 if (STATUS_MAP.shelf.canCheckout)checkout2.disabled=false;
 if (STATUS_MAP.shelf.canCheckIn) checkin2.disabled=false;
 
+console.log("Checking canReserve:", STATUS_MAP.overdue.canReserve);
+console.log (reserve0)
